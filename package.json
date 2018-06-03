@@ -3,6 +3,8 @@
   "version": "0.1.1",
   "private": false,
   "dependencies": {
+    "flow-bin": "^0.72.0",
+    "localforage": "^1.7.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-scripts": "1.1.4"
@@ -11,6 +13,19 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "deploy": "gh-pages -b gh-pages -d build"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-easy": "^1.0.10",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-html": "1.5.1",
+    "eslint-plugin-react": "^7.5.1",
+    "prettier-eslint-cli": "^4.7.0",
+    "gh-pages": "^1.1.0"
   }
 }
