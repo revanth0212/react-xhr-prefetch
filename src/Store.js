@@ -12,4 +12,6 @@ const store = localForage.createInstance({
   name: 'prefetch',
 })
 
+store.clear()
+
 export default store
