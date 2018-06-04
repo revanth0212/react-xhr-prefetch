@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+
+import PrefetchWorker from './PrefetchWorker'
 import Prefetch from './Prefetch'
 import './App.css'
 
@@ -16,17 +18,19 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <input type="button" value="Toggle View" onClick={this.toggleView} />
-        {this.state.show && (
-          <div>
-            <Prefetch url="www.facebook.com" prefetchTimeout={10000} enable>
-              <div> This Component has Prefetch Wrapped around it. </div>
-            </Prefetch>
-          </div>
-        )}
-        <div> {'Checkout Developer Tools -> Application -> IndexedDB -> prefetch'} </div>
-      </div>
+      <PrefetchWorker>
+        <div className="App">
+          <input type="button" value="Toggle View" onClick={this.toggleView} />
+          {this.state.show && (
+            <div>
+              <Prefetch url="www.facebook.com" prefetchTimeout={10000} enable>
+                <div> This Component has Prefetch Wrapped around it. </div>
+              </Prefetch>
+            </div>
+          )}
+          <div> {'Checkout Developer Tools -> Application -> IndexedDB -> prefetch'} </div>
+        </div>
+      </PrefetchWorker>
     )
   }
 }
