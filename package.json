@@ -17,6 +17,7 @@
   "dependencies": {
     "flow-bin": "^0.72.0",
     "localforage": "^1.7.1",
+    "promise-worker": "^1.1.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "worker-loader": "^2.0.0"

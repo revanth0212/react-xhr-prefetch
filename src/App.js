@@ -22,7 +22,7 @@ class App extends Component {
           <input type="button" value="Toggle View" onClick={this.toggleView} />
           {this.state.show && (
             <div>
-              <Prefetch url="www.facebook.com" prefetchTimeout={10000} enable>
+              <Prefetch url="www.facebook.com" prefetchTimeout={20000} enable>
                 <div> This Component has Prefetch Wrapped around it. </div>
               </Prefetch>
             </div>
