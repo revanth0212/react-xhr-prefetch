@@ -1,4 +1,3 @@
 # react-xhr-prefetch
-A react library that lets you fetch your XHR calls in advance.
 
-# Under development. Stay tuned.
+Describe react-xhr-prefetch here.

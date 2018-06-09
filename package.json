@@ -1,31 +1,50 @@
 {
   "name": "react-xhr-prefetch",
-  "version": "0.1.1",
-  "private": false,
+  "version": "1.0.0",
+  "description": "Describe react-xhr-prefetch here",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "nwb-build": "nwb build-react-app",
+    "build": "SET NODE_ENV=production && rm -rf dist && mkdir dist && npx babel src/Prefetch --out-dir dist --copy-files",
+    "clean": "nwb clean-app",
+    "start": "nwb serve-react-app",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
+  },
   "dependencies": {
     "flow-bin": "^0.72.0",
     "localforage": "^1.7.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "flow": "flow",
-    "deploy": "gh-pages -b gh-pages -d build"
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "worker-loader": "^2.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-easy": "^1.0.10",
     "eslint-plugin-flowtype": "^2.39.1",
     "eslint-plugin-html": "1.5.1",
     "eslint-plugin-react": "^7.5.1",
-    "prettier-eslint-cli": "^4.7.0",
-    "gh-pages": "^1.1.0"
-  }
+    "gh-pages": "^1.1.0",
+    "nwb": "^0.21.5",
+    "prettier-eslint-cli": "^4.7.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "env",
+      "stage-2"
+    ]
+  },
+  "author": "Revanth Kumar Annavarapu",
+  "license": "MIT",
+  "repository": ""
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import PrefetchWorker from './PrefetchWorker'
-import Prefetch from './Prefetch'
+import { PrefetchWorker, Prefetch } from './Prefetch'
 import './App.css'
 
 /* eslint-disable react/prefer-stateless-function  */

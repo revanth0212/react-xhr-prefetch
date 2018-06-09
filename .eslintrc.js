@@ -6,13 +6,13 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    mocha: true
+    mocha: true,
   },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
-      modules: true
-    }
+      modules: true,
+    },
   },
   plugins: ['react', 'flowtype'],
   rules: {
@@ -25,23 +25,23 @@ module.exports = {
           ['&', '|', '^', '~', '<<', '>>', '>>>'],
           ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
           ['&&', '||'],
-          ['in', 'instanceof']
+          ['in', 'instanceof'],
         ],
-        allowSamePrecedence: false
-      }
+        allowSamePrecedence: false,
+      },
     ],
-    'arrow-parens': ['error', 'always']
+    'arrow-parens': ['error', 'always'],
   },
   settings: {
     'import/resolver': {
       node: {
         extensions: ['.js'],
-        paths: ['node_modules', path.join(__dirname, 'src')]
-      }
+        paths: ['node_modules', path.join(__dirname, 'src')],
+      },
     },
     flowtype: {
-      onlyFilesWithFlowAnnotation: false
-    }
+      onlyFilesWithFlowAnnotation: false,
+    },
   },
   globals: {
     tinymce: true,
@@ -60,6 +60,6 @@ module.exports = {
     SyntheticDragEvent: true,
     SyntheticWheelEvent: true,
     SyntheticTouchEvent: true,
-    SyntheticTransitionEvent: true
-  }
+    SyntheticTransitionEvent: true,
+  },
 }

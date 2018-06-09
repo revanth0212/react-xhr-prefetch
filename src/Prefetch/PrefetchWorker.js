@@ -1,10 +1,11 @@
 import React from 'react'
+import Worker from './Prefetch.worker'
 
 class PrefetchWorker extends React.Component {
   componentWillMount() {
     // load the worker and start it
     if (window.Worker) {
-      this.worker = new Worker('prefetchMainWorker.js')
+      this.worker = new Worker()
     }
   }
 
